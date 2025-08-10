@@ -18,11 +18,10 @@ export const login = async (req: Request, res: Response) => {
     }
 
     const token = jwt.sign(
-      { id: user._id, email: user.email },
-      process.env.JWT_SECRET || 'default_secret',
-      { expiresIn: process.env.JWT_EXPIRES_IN || '7d' }
-    );
-
+  { id: user.id, email: user.email },
+  process.env.JWT_SECRET as string, // Assert it's a string
+  { expiresIn: '1h' }               // This is the third param: options
+  );
     res.json({
       success: true,
       token,
