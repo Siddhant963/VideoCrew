@@ -30,7 +30,7 @@ const App: React.FC = () => {
         <Footer /> */}
 
     {/* </Router> */}
-    {/* <Footer/> */}
+    <Footer/>
    
     </>
   )
