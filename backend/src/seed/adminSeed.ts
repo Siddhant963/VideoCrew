@@ -1,24 +1,39 @@
+// src/seed/adminSeed.ts
+import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 import AdminUser from '../models/AdminUser';
-import dotenv from 'dotenv';
+
 dotenv.config();
 
-async function run() {
-  await mongoose.connect(process.env.MONGO_URI as string);
-  const existing = await AdminUser.findOne({ email: 'admin@videocrew.com' });
-  if (existing) {
-    console.log('Admin already exists');
-    process.exit(0);
-  }
-  const hashed = await bcrypt.hash('Test@123', 10);
-  const admin = new AdminUser({ email: 'admin@videocrew.com', password: hashed, name: 'Admin User' });
-  await admin.save();
-  console.log('Admin created');
-  process.exit(0);
-}
+const seedAdmin = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URI || '', { dbName: 'video_portfolio' });
 
-run().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+    const email = 'admin@videocrew.com';
+    const password = 'Test@123';
+
+    const existingAdmin = await AdminUser.findOne({ email });
+    if (existingAdmin) {
+      console.log('⚠️ Admin user already exists');
+      process.exit(0);
+    }
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const admin = new AdminUser({
+      email,
+      password: hashedPassword,
+      name: 'Admin User',
+    });
+
+    await admin.save();
+    console.log('✅ Admin user created successfully');
+    process.exit(0);
+  } catch (error) {
+    console.error('❌ Error seeding admin user:', error);
+    process.exit(1);
+  }
+};
+
+seedAdmin();
