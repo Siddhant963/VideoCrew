@@ -1,6 +1,6 @@
 
 
-//navbar
+
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react"; 
 import videologo from "../../assets/VIDEO.png";
@@ -23,8 +23,7 @@ export default function Navbar() {
 
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         
-    
-        {/* Logo */}
+  
        <div className="flex items-center gap-[]">
   <img
     src={videologo}
@@ -39,7 +38,6 @@ export default function Navbar() {
 </div>
 
 
-        {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 text-[20px] font-medium">
           {menuItems.map((item, idx) => (
              <li key={idx}>
@@ -53,7 +51,6 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden"
           onClick={() => setIsOpen(!isOpen)}
@@ -63,7 +60,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
       {isOpen && (
         <ul className="md:hidden flex flex-col gap-4 mt-4 text-sm font-medium bg-black border-t border-gray-800 pt-4">
           {menuItems.map((item, idx) => (
