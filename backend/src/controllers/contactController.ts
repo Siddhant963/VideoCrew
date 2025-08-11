@@ -22,14 +22,15 @@ export const getAllContacts = async (_req: Request, res: Response) => {
 
 export const updateContactStatus = async (req: Request, res: Response) => {
   try {
-    const updatedContact = await ContactInquiry.findByIdAndUpdate(
-      req.params.id,
-      req.body,
-      { new: true }
-    );
-    if (!updatedContact) return res.status(404).json({ message: 'Contact inquiry not found' });
-    res.json(updatedContact);
-  } catch (error) {
-    res.status(400).json({ message: 'Invalid data', error });
+    const {id} = req.params;
+    const {status} = req.body;
+    const updatedContact = await ContactInquiry.findByIdAndUpdate(id, {status}, {new: true});
+    if(!updatedContact) {
+      return res.status(404).json({message: 'Contact not found'})
+    }
+    res.json({success: true, updatedContact})
   }
-};
+  catch (error) {
+    res.status(500).json({message: 'Server error', error})
+  }
+}
