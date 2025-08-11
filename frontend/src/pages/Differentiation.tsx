@@ -139,11 +139,6 @@ const Differentiation: React.FC = () => {
             문의하기
           </button>
         </div>
-
-        {/* Footer */}
-        <footer className="mt-10 sm:mt-12 py-6 sm:py-8 text-gray-500 text-xs sm:text-sm border-t border-gray-800 text-center">
-          <p>© 2025 Video Crew all rights reserved.</p>
-        </footer>
       </div>
     </section>
   );
