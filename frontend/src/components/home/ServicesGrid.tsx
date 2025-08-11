@@ -104,16 +104,51 @@ const ServiceGrid: React.FC = () => {
       </div>
 
       {/* Background with centered content */}
-      <div
-        className="relative w-full h-[400px] mt-16 flex justify-center items-center bg-center bg-no-repeat bg-cover"
-        style={{ backgroundImage: `url(${background})` }}
-      >
-        <img
-          src={content}
-          alt="Content overlay"
-          className="max-w-full h-auto mx-auto"
-        />
-      </div>
+    <div
+  className="relative w-full sm:h-[400px] h-[500px] mt-16 flex justify-center items-center bg-center bg-no-repeat bg-cover"
+  style={{ backgroundImage: `url(${background})` }}
+>
+  <div className="sm:flex-row justify-center items-center sm:gap-40 text-white flex flex-col gap-8">
+    
+    {/* Card 1 */}
+    <div className="flex flex-col items-center">
+      <h1 className="text-[54px] sm:text-[64px] font-bold font-montserrat flex items-start gap-1">
+        10
+        <span className="text-3xl sm:text-4xl leading-none align-super">+</span>
+      </h1>
+      <p>다년간의 경험</p>
+    </div>
+
+    {/* Card 2 */}
+    <div className="flex flex-col items-center">
+      <h1 className="text-[54px] sm:text-[64px] font-bold font-montserrat flex items-start gap-1">
+        100
+        <span className="text-3xl sm:text-4xl leading-none align-super">+</span>
+      </h1>
+      <p>누적 프로젝트 수</p>
+    </div>
+
+    {/* Card 3 */}
+    <div className="flex flex-col items-center">
+      <h1 className="text-[54px] sm:text-[64px] font-bold font-montserrat flex items-start gap-1">
+        100
+        <span className="text-3xl sm:text-4xl leading-none align-super">%</span>
+      </h1>
+      <p>고객 만족도</p>
+    </div>
+
+    {/* Card 4 */}
+    <div className="flex flex-col items-center">
+      <h1 className="text-[54px] sm:text-[64px] font-bold font-montserrat flex items-start gap-1">
+        90
+        <span className="text-3xl sm:text-4xl leading-none align-super">%</span>
+      </h1>
+      <p>프로젝트 재수주율</p>
+    </div>
+
+  </div>
+</div>
+
 
       {/* Decorative curved divider */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[200%] h-24">
