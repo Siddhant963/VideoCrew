@@ -1,187 +1,93 @@
-// "use client"
+import React from 'react';
+import bannerImg from "../../../public/images/Banner_Image.png";
+import Img1 from "../../../public/images/image 3.png";
+import Img2 from "../../../public/images/image 2.png";
+import Img3 from "../../../public/images/image 1.png";
+import Img4 from "../../../public/images/Image (3).png";
+import Img5 from "../../../public/images/Group 123.png";
 
-// import type React from "react"
-// import { useState, useEffect } from "react"
-// import Button from "../common/Button"
 
-// const HeroSection: React.FC = () => {
-//   const [isVisible, setIsVisible] = useState(false)
 
-//   useEffect(() => {
-//     setIsVisible(true)
-//   }, [])
 
-//   return (
-//     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-//       {/* Background Video/Image */}
-//       <div className="absolute inset-0 z-0">
-//         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30 z-10" />
-//         <img src="/cinematic-video-setup.png" alt="Video Production Setup" className="w-full h-full object-cover" />
-//       </div>
 
-//       {/* Content */}
-//       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-//         <div
-//           className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-//         >
-//           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-montserrat mb-6 leading-tight">
-//             Crafting Visual
-//             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
-//               Stories That Matter
-//             </span>
-//           </h1>
-
-//           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-//             We transform your ideas into compelling visual narratives through professional video production, from
-//             concept to final cut.
-//           </p>
-
-//           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-//             <Button size="lg" className="group">
-//               Start Your Project
-//               <svg
-//                 className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
-//                 fill="none"
-//                 stroke="currentColor"
-//                 viewBox="0 0 24 24"
-//               >
-//                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-//               </svg>
-//             </Button>
-
-//             <button className="flex items-center space-x-3 text-white hover:text-gray-300 transition-colors group">
-//               <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full group-hover:bg-white/30 transition-colors">
-//                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-//                   <path d="M8 5v14l11-7z" />
-//                 </svg>
-//               </div>
-//               <span className="font-medium">Watch Our Reel</span>
-//             </button>
-//           </div>
-
-//           {/* Stats */}
-//           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-//             {[
-//               { number: "500+", label: "Projects Completed" },
-//               { number: "50+", label: "Happy Clients" },
-//               { number: "10+", label: "Years Experience" },
-//               { number: "25+", label: "Awards Won" },
-//             ].map((stat, index) => (
-//               <div key={index} className="text-center">
-//                 <div className="text-2xl md:text-3xl font-bold font-montserrat mb-1">{stat.number}</div>
-//                 <div className="text-sm text-gray-400">{stat.label}</div>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Scroll Indicator */}
-//       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-//         <div className="animate-bounce">
-//           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-//             <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse" />
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }
-
-// export default HeroSection
-
-"use client"
-
-import type React from "react"
-import { useState, useEffect } from "react"
-
-const HeroSection: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
-
+export const HeroSection: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40 z-10" />
-        <img src="/cinematic-video-setup.png" alt="Video Production Setup" className="w-full h-full object-cover" />
-      </div>
+    <><section className="relative">
+      <div
+        className="h-[480px] sm:h-[560px] md:h-[640px] xl:h-[720px] bg-cover bg-center relative"
+        style={{ backgroundImage: `url(${bannerImg})` }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
-      {/* Content */}
-      <div className="relative z-20 container mx-auto text-center" style={{ paddingTop: "80px" }}>
-        <div
-          className={`transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          {/* Main Heading */}
-          <h1 className="text-display mb-6">
-            Crafting Visual
-            <span className="block bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-              Stories That Matter
-            </span>
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-body-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-            We transform your ideas into compelling visual narratives through professional video production, from
-            concept to final cut.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <button className="btn btn-primary group">
-              Start Your Project
-              <svg
-                className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </button>
-
-            <button className="flex items-center space-x-3 text-white hover:text-gray-300 transition-colors group">
-              <div className="bg-white/20 backdrop-blur-sm p-4 rounded-full group-hover:bg-white/30 transition-colors">
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-              <span className="font-medium">Watch Our Reel</span>
-            </button>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {[
-              { number: "500+", label: "Projects Completed" },
-              { number: "50+", label: "Happy Clients" },
-              { number: "10+", label: "Years Experience" },
-              { number: "25+", label: "Awards Won" },
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold mb-2">{stat.number}</div>
-                <div className="text-sm text-gray-400">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-        <div className="animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse" />
+        {/* Content */}
+        <div className="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8 h-full flex items-end md:items-center">
+          <div className="max-w-3xl pb-8 md:pb-0">
+            <p className="text-xs sm:text-sm md:text-base text-gray-300 mb-4">
+              “이번엔 정말 제대로 된 연출을 하고 싶다... 혹시 이런 마음으로 여기까지 오셨나요? 축하드립니다!”
+            </p>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
+              비디오크루가 정답입니다!
+            </h1>
           </div>
         </div>
       </div>
     </section>
-  )
-}
+    <section className="bg-black text-white py-16">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+         <div className='flex justify-between mt-8'>
+           <h2 className="text-2xl sm:text-3xl font-bold mb-6 md:mb-8 ">
+            <h3>비디오크루의 차별점</h3>
+            영상 제작, 어떻게 하고 계신가요?
+          </h2>
+          <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-10 md:mb-12 max-w-3xl">
+            비디오크루는 단순한 영상 제작을 넘어, 철저한 스토리보드와 독창적인 시각을 통한
+            차별화된 콘텐츠를 제공합니다. 영상의 퀄리티를 높이는 전문적인 접근 방식으로
+            프로젝트의 완성도를 높입니다.
+          </p>
 
-export default HeroSection
+         </div>
+          {/* Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 md:gap-4">
+            {/* Card 1 */}
+            <div className="bg-gray-900">
+              <img src={Img1} alt="Creative Solutions" className="w-full h-48 md:h-56 object-cover" />
+              <div className="p-4 md:p-6">
+                <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">Creative Solutions</h3>
+                <p className="text-gray-400 text-sm md:text-base">
+                  독창적인 시각과 최적의 아이디어를 제시합니다.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-gray-900">
+              <img src={Img2} alt="Professional Quality" className="w-full h-48 md:h-56 object-cover" />
+              <div className="p-4 md:p-6">
+                <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">Professional Quality</h3>
+                <p className="text-gray-400 text-sm md:text-base">
+                  다양한 경험과 전문 장비를 통해 최고의 퀄리티를 보장합니다.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-gray-900">
+              <img src={Img3} alt="All-in-One Service" className="w-full h-48 md:h-56 object-cover" />
+              <div className="p-4 md:p-6">
+                <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">All-in-One Service</h3>
+                <p className="text-gray-400 text-sm md:text-base">
+                  기획부터 촬영, 편집까지 원스톱으로 제공합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div>
+        <img src={Img4} alt="" />
+        
+      </div>
+      </>
+  );
+};
