@@ -19,7 +19,6 @@ const App: React.FC = () => {
 
   const handleLogout = () => {
     setUser(null);
-    // more logout logic...
   };
   return (
     <>
