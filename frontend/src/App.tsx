@@ -1,32 +1,50 @@
-import type React from "react"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import Navbar from "./components/common/Navbar"
-import Footer from "./components/common/Footer"
-import Home from "./pages/Home"
-import About from "./pages/About"
-import Process from "./pages/Process"
-import Portfolio from "./pages/Portfolio"
-import Differentiation from "./pages/Differentiation"
-import Contact from "./pages/Contact"
-import Dashboard from "./admin/Dashboard"
-import "./index.css"
+import type React from "react";
+import { Routes, Route } from "react-router-dom";
+import Footer from "./components/common/Footer";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Process from "./pages/Process";
+import Portfolio from "./pages/Portfolio";
+import Differentiation from "./pages/Differentiation";
+import Contact from "./pages/Contact";
+import Dashboard from "./admin/AdminDashboard";
+import "./index.css";
+import { useState } from "react";
 
 const App: React.FC = () => {
+    const [user, setUser] = useState<{ name: string; email: string } | null>({
+    name: "Alice",
+    email: "alice@example.com",
+  });
+
+  const handleLogout = () => {
+    setUser(null);
+    // more logout logic...
+  };
   return (
-    <Router>
-      <Navbar />
+    <>
+     
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/about" element={<About />} /> */}
+        <Route path="/about" element={<About />} />
         <Route path="/process" element={<Process />} />
-        {/* <Route path="/portfolio" element={<Portfolio />} /> */}
+        <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/differentiation" element={<Differentiation />} />
-        {/* <Route path="/contact" element={<Contact />} /> */}
-        {/* <Route path="/admin" element={<Dashboard />} /> */}
+        <Route path="/contact" element={<Contact />} />
+        <Route
+          path="/admin"
+          element={
+            user ? (
+              <Dashboard user={user} onLogout={handleLogout} />
+            ) : (
+              <div>Please login to access dashboard</div>
+            )
+          }
+        />
       </Routes>
-      {/* <Footer /> */}
-    </Router>
-  )
-}
+      <Footer />
+    </>
+  );
+};
 
-export default App
+export default App;
