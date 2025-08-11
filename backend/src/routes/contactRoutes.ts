@@ -9,10 +9,10 @@ import { protect } from '../middlewares/authMiddleware';
 const router = express.Router();
 
 // Public
-router.post('/', submitContact);
+router.post('/', submitContact); // done tested
 
 // Protected
-router.get('/', protect, getAllContacts);
-router.put('/:id', protect, updateContactStatus);
+router.get('/', protect, getAllContacts); //done tested
+router.put('/:id', protect, updateContactStatus); // done tested
 
 export default router;
