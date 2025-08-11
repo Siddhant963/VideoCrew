@@ -1,239 +1,126 @@
-// "use client"
+import React from 'react';
+import Img5 from "../../../public/images/Image (4).png";
+import Img6 from "../../../public/images/Group 237625.png";
+import background from "../../../public/images/Background.png";
+import content from "../../../public/images/Content.png";
+import content2 from "../../../public/imagestwo/Group 41.png";
+import content3 from "../../../public/imagestwo/Group 42.png";
+import content4 from "../../../public/imagestwo/Group 44.png";
+import content5 from "../../../public/imagestwo/Group 45.png";
+import content6 from "../../../public/imagestwo/Group 46.png";
+import content7 from "../../../public/imagestwo/Group 48.png";
+import content8 from "../../../public/imagestwo/Rectangle 11.png";
+import content9 from "../../../public/imagestwo/Rectangle 15.png";
+import content10 from "../../../public/imagestwo/Rectangle 16.png";
 
-// import type React from "react"
-// import { useState, useEffect, useRef } from "react"
 
-// const ServicesGrid: React.FC = () => {
-//   const [visibleItems, setVisibleItems] = useState<number[]>([])
-//   const sectionRef = useRef<HTMLElement>(null)
+// Portfolio images
+const portfolioImages = [
+  content2,
+  content3,
+  content4,
+  content5,
+  content6,
+  content7, 
+  content8,
+  content9, 
+  content10
+];
 
-//   const services = [
-//     {
-//       icon: "🎥",
-//       title: "Corporate Videos",
-//       description: "Professional corporate content that communicates your brand message effectively.",
-//       features: ["Brand Videos", "Training Content", "Internal Communications"],
-//     },
-//     {
-//       icon: "📹",
-//       title: "Commercial Production",
-//       description: "High-impact commercials that drive engagement and conversions.",
-//       features: ["TV Commercials", "Digital Ads", "Product Showcases"],
-//     },
-//     {
-//       icon: "✂️",
-//       title: "Post-Production",
-//       description: "Expert editing, color grading, and sound design to perfect your content.",
-//       features: ["Video Editing", "Color Grading", "Sound Design"],
-//     },
-//     {
-//       icon: "🎨",
-//       title: "Animation & Motion",
-//       description: "Creative animation and motion graphics that bring ideas to life.",
-//       features: ["2D Animation", "3D Graphics", "Motion Design"],
-//     },
-//     {
-//       icon: "📺",
-//       title: "Event Coverage",
-//       description: "Comprehensive event documentation and live streaming services.",
-//       features: ["Live Events", "Conferences", "Weddings"],
-//     },
-//     {
-//       icon: "🏆",
-//       title: "Documentary",
-//       description: "Compelling documentary storytelling that captures authentic narratives.",
-//       features: ["Corporate Docs", "Personal Stories", "Historical Content"],
-//     },
-//   ]
-
-//   useEffect(() => {
-//     const observer = new IntersectionObserver(
-//       (entries) => {
-//         entries.forEach((entry) => {
-//           if (entry.isIntersecting) {
-//             const index = Number.parseInt(entry.target.getAttribute("data-index") || "0")
-//             setVisibleItems((prev) => [...prev, index])
-//           }
-//         })
-//       },
-//       { threshold: 0.1 },
-//     )
-
-//     const items = sectionRef.current?.querySelectorAll("[data-index]")
-//     items?.forEach((item) => observer.observe(item))
-
-//     return () => observer.disconnect()
-//   }, [])
-
-//   return (
-//     <section ref={sectionRef} className="py-20 lg:py-32 bg-gray-900">
-//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//         <div className="text-center mb-16">
-//           <h2 className="text-3xl md:text-5xl font-bold font-montserrat mb-6">Our Services</h2>
-//           <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-//             From concept to completion, we offer comprehensive video production services tailored to meet your unique
-//             needs and objectives.
-//           </p>
-//         </div>
-
-//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-//           {services.map((service, index) => {
-//             const isVisible = visibleItems.includes(index)
-
-//             return (
-//               <div
-//                 key={index}
-//                 data-index={index}
-//                 className={`group bg-black border border-gray-800 rounded-2xl p-8 hover:border-gray-600 transition-all duration-500 hover:transform hover:scale-105 ${
-//                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-//                 }`}
-//                 style={{ transitionDelay: `${index * 100}ms` }}
-//               >
-//                 <div className="text-4xl mb-6">{service.icon}</div>
-
-//                 <h3 className="text-xl font-bold font-montserrat mb-4 group-hover:text-gray-200 transition-colors">
-//                   {service.title}
-//                 </h3>
-
-//                 <p className="text-gray-400 mb-6 leading-relaxed">{service.description}</p>
-
-//                 <ul className="space-y-2">
-//                   {service.features.map((feature, featureIndex) => (
-//                     <li key={featureIndex} className="flex items-center text-sm text-gray-500">
-//                       <div className="w-1.5 h-1.5 bg-white rounded-full mr-3" />
-//                       {feature}
-//                     </li>
-//                   ))}
-//                 </ul>
-//               </div>
-//             )
-//           })}
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }
-
-// export default ServicesGrid
-
-"use client"
-
-import type React from "react"
-import { useState, useEffect, useRef } from "react"
-
-const ServicesGrid: React.FC = () => {
-  const [visibleItems, setVisibleItems] = useState<number[]>([])
-  const sectionRef = useRef<HTMLElement>(null)
-
-  const services = [
-    {
-      icon: "🎥",
-      title: "Corporate Videos",
-      description: "Professional corporate content that communicates your brand message effectively.",
-      features: ["Brand Videos", "Training Content", "Internal Communications"],
-    },
-    {
-      icon: "📹",
-      title: "Commercial Production",
-      description: "High-impact commercials that drive engagement and conversions.",
-      features: ["TV Commercials", "Digital Ads", "Product Showcases"],
-    },
-    {
-      icon: "✂️",
-      title: "Post-Production",
-      description: "Expert editing, color grading, and sound design to perfect your content.",
-      features: ["Video Editing", "Color Grading", "Sound Design"],
-    },
-    {
-      icon: "🎨",
-      title: "Animation & Motion",
-      description: "Creative animation and motion graphics that bring ideas to life.",
-      features: ["2D Animation", "3D Graphics", "Motion Design"],
-    },
-    {
-      icon: "📺",
-      title: "Event Coverage",
-      description: "Comprehensive event documentation and live streaming services.",
-      features: ["Live Events", "Conferences", "Weddings"],
-    },
-    {
-      icon: "🏆",
-      title: "Documentary",
-      description: "Compelling documentary storytelling that captures authentic narratives.",
-      features: ["Corporate Docs", "Personal Stories", "Historical Content"],
-    },
-  ]
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const index = Number.parseInt(entry.target.getAttribute("data-index") || "0")
-            setVisibleItems((prev) => [...prev, index])
-          }
-        })
-      },
-      { threshold: 0.1 },
-    )
-
-    const items = sectionRef.current?.querySelectorAll("[data-index]")
-    items?.forEach((item) => observer.observe(item))
-
-    return () => observer.disconnect()
-  }, [])
-
+const ServiceGrid: React.FC = () => {
+   // Explicit order and exactly two rows (5 on first, 4 on second)
+   const firstRowImages = [content8, content2, content3, content4, content9];
+   const secondRowImages = [content5, content6, content7, content10];
   return (
-    <section ref={sectionRef} className="py-24 bg-gray-900">
-      <div className="container mx-auto">
+    <section className="relative bg-black text-white py-24 sm:py-32 flex flex-col items-center">
+      <div className="max-w-7xl w-full px-6 lg:px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-heading-xl mb-6">Our Services</h2>
-          <p className="text-body-lg text-gray-400 max-w-3xl mx-auto">
-            From concept to completion, we offer comprehensive video production services tailored to meet your unique
-            needs and objectives.
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+            비디오크루의 영상제작 사례
+          </h2>
+          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-400">
+            당신이 상상하는 세상을 현실로, 모든 프레임에 가치를 담다.
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => {
-            const isVisible = visibleItems.includes(index)
+        {/* Portfolio Image Grid removed from container to allow full-bleed layout */}
 
-            return (
-              <div
-                key={index}
-                data-index={index}
-                className={`card group transition-all duration-500 ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                {/* Icon */}
-                <div className="text-4xl mb-6">{service.icon}</div>
-
-                {/* Title */}
-                <h3 className="text-heading-md mb-4 group-hover:text-gray-200 transition-colors">{service.title}</h3>
-
-                {/* Description */}
-                <p className="text-body text-gray-400 mb-6">{service.description}</p>
-
-                {/* Features */}
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-body-sm text-gray-500">
-                      <div className="w-1.5 h-1.5 bg-white rounded-full mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )
-          })}
+        {/* "View More" Button */}
+        <div className="mt-16 text-center">
+          <button className="rounded-full bg-blue-600 px-8 py-3 text-base font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+            포트폴리오 둘러보기
+          </button>
         </div>
       </div>
-    </section>
-  )
-}
 
-export default ServicesGrid
+      {/* Centered two-row brick image grid */}
+      <div className="w-full mt-16">
+        <div className="mx-auto max-w-7xl px-0">
+          <div className="flex flex-col gap-2 sm:gap-3 md:gap-4">
+            {/* Row 1 */}
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
+              {firstRowImages.map((src, index) => (
+                <img
+                  key={`row1-${index}`}
+                  src={src}
+                  alt={`Portfolio image ${index + 1}`}
+                  className="h-[96px] sm:h-[128px] md:h-[160px] w-auto object-cover select-none block"
+                  loading="lazy"
+                />
+              ))}
+            </div>
+            {/* Row 2 */}
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
+              {secondRowImages.map((src, index) => (
+                <img
+                  key={`row2-${index}`}
+                  src={src}
+                  alt={`Portfolio image ${firstRowImages.length + index + 1}`}
+                  className="h-[96px] sm:h-[128px] md:h-[160px] w-auto object-cover select-none block"
+                  loading="lazy"
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Centered extra image */}
+      <div className="mt-16">
+        <img src={Img5} alt="" className="mx-auto" />
+      </div>
+
+      {/* Centered heading */}
+      <div className="flex justify-center text-center mt-8">
+        <h1 className="text-xl sm:text-2xl font-bold leading-relaxed">
+          이미 수많은 기업이 <br /> 비디오크루와 함께 하고 있습니다.
+        </h1>
+      </div>
+
+      {/* Centered image */}
+      <div className="mt-8">
+        <img src={Img6} alt="" className="mx-auto" />
+      </div>
+
+      {/* Background with centered content */}
+      <div
+        className="relative w-full h-[400px] mt-16 flex justify-center items-center bg-center bg-no-repeat bg-cover"
+        style={{ backgroundImage: `url(${background})` }}
+      >
+        <img
+          src={content}
+          alt="Content overlay"
+          className="max-w-full h-auto mx-auto"
+        />
+      </div>
+
+      {/* Decorative curved divider */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[200%] h-24">
+        <div className="w-full h-full border-t border-gray-700/50 rounded-[50%] bg-transparent shadow-[0_-10px_30px_-5px_rgba(0,119,255,0.1)]"></div>
+      </div>
+    </section>
+  );
+};
+
+export default ServiceGrid;

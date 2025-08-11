@@ -13,26 +13,19 @@ import "./index.css"
 
 const App: React.FC = () => {
   return (
-    <>
-    <Navbar/>
-     {/* <Router> */}
-    
-        {/* <Navbar /> */}
-        {/* <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/process" element={<Process />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/differentiation" element={<Differentiation />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/admin" element={<Dashboard />} />
-        </Routes>
-        <Footer /> */}
-
-    {/* </Router> */}
-    <Footer/>
-   
-    </>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/about" element={<About />} /> */}
+        <Route path="/process" element={<Process />} />
+        {/* <Route path="/portfolio" element={<Portfolio />} /> */}
+        {/* <Route path="/differentiation" element={<Differentiation />} /> */}
+        {/* <Route path="/contact" element={<Contact />} /> */}
+        {/* <Route path="/admin" element={<Dashboard />} /> */}
+      </Routes>
+      {/* <Footer /> */}
+    </Router>
   )
 }
 
