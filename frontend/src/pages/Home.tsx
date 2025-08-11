@@ -1,5 +1,5 @@
 import type React from "react"
-import HeroSection from "../components/home/HeroSection"
+import { HeroSection} from "../components/home/HeroSection"
 import ServicesGrid from "../components/home/ServicesGrid"
 
 const Home: React.FC = () => {
