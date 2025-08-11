@@ -92,18 +92,12 @@ const Process: React.FC = () => {
         </div>
         {[0, 2, 4].includes(index) && (
           <>
-            {/* Desktop square connector */}
             <div className="hidden md:block absolute top-full left-0 w-full h-16">
-              {/* Vertical 1 */}
               <div className="absolute top-0 left-1/2 w-0 h-8 border-l-2 border-white border-dotted"></div>
-              {/* Horizontal with space in mid */}
               <div className="absolute top-8 left-1/2 w-[20%] h-0 border-t-2 border-white border-dotted"></div>
               <div className="absolute top-8 left-[80%] w-[20%] h-0 border-t-2 border-white border-dotted"></div>
-              {/* Vertical 2 */}
               <div className="absolute top-8 left-full w-0 h-8 border-l-2 border-white border-dotted"></div>
-              {/* Vector in the mid of horizontal */}
             </div>
-            {/* Mobile vertical connector */}
             <div className="md:hidden w-0 h-8 border-l-2 border-white border-dotted mx-auto"></div>
           </>
         )}
@@ -121,7 +115,6 @@ const Process: React.FC = () => {
 
   return (
     <section className="bg-black text-white py-16  border-gray-700 border-2">
-      {/* Header */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-20 ">
         <div className="text-center text-sm">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 ">
@@ -142,7 +135,6 @@ const Process: React.FC = () => {
         </div>
       </div>
 
-      {/* Steps */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 px-4">
         {elements}
       </div>
