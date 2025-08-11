@@ -1,34 +1,67 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import mongoose from "mongoose";
 
-export type ContactStatus = 'new' | 'processing' | 'completed';
-
-export interface IContactInquiry extends Document {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-  status: ContactStatus;
-  adminNotes?: string;
-  createdAt: Date;
-  updatedAt: Date;
-  deletedAt?: Date | null;
-}
-
-const ContactInquirySchema: Schema<IContactInquiry> = new Schema(
+const contactSchema = new mongoose.Schema(
   {
-    name: { type: String, required: true },
-    email: { type: String, required: true },
-    subject: { type: String, required: true },
-    message: { type: String, required: true },
-    status: {
+    name: {
       type: String,
-      enum: ['new', 'processing', 'completed'],
-      default: 'new'
+      required: true,
+      trim: true,
     },
-    adminNotes: { type: String },
-    deletedAt: { type: Date, default: null }
+    email: {
+      type: String,
+      required: true,
+      trim: true,
+      lowercase: true,
+      match: [/^\S+@\S+\.\S+$/, "Please enter a valid email address"],
+    },
+    phone: {
+      type: String,
+      trim: true,
+      match: [/^\+?\d{7,15}$/, "Please enter a valid phone number"],
+    },
+    company: {
+      type: String,
+      trim: true,
+    },
+    videoCount: {
+      type: Number,
+      min: 0,
+    },
+    shootDate: {
+      type: Date,
+    },
+    runningTime: {
+      type: String, // could also store as Number (minutes) if you prefer
+      trim: true,
+    },
+    targetAudience: {
+      type: String,
+      trim: true,
+    },
+    productionPurpose: {
+      type: String,
+      trim: true,
+    },
+    subject: {
+      type: String,
+      trim: true,
+    },
+    uploadPlan: {
+      type: String,
+      trim: true,
+    },
+    referenceLinks: {
+      type: String,
+      trim: true,
+    },
+    consent: {
+      type: Boolean,
+      default: false,
+    },
   },
   { timestamps: true }
 );
 
-export default mongoose.model<IContactInquiry>('ContactInquiry', ContactInquirySchema);
+const Contact = mongoose.model("Contact", contactSchema);
+
+export default Contact;
