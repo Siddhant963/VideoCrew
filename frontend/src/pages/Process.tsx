@@ -75,19 +75,19 @@ const Process: React.FC = () => {
     const card = (
       <div
         key={step.number}
-        className={`relative flex flex-col ${isLeft ? 'items-start text-left' : 'items-end text-right'} w-full`}
+        className={`relative flex flex-col text-[#1f1f1f] w-full`}
       >
         <div className="text-[147px] font-bold mb-4 opacity-70 leading-none">{step.number}</div>
-        <div className="relative w-full rounded-lg overflow-hidden h-80">
+        <div className="relative w-full overflow-hidden h-80">
           <img
             src={step.image}
             alt={step.titleKo}
             className="w-full h-full object-cover"
           />
           <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-            <h3 className="text-2xl font-bold">{step.titleKo}</h3>
+            <h3 className="text-2xl font-bold text-white">{step.titleKo}</h3>
             <p className="text-md text-white font-bold mb-2">{step.titleEn}</p>
-            <p className="text-gray-300">{step.description}</p>
+            <p className="text-[#8c8c8c]">{step.description}</p>
           </div>
         </div>
         {[0, 2, 4].includes(index) && (
@@ -120,25 +120,24 @@ const Process: React.FC = () => {
   });
 
   return (
-    <section className="bg-black text-white py-16">
+    <section className="bg-black text-white py-16  border-gray-700 border-2">
       {/* Header */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-20 px-4">
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-20 ">
+        <div className="text-center text-sm">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 ">
             영상제작 프로세스
           </h2>
-          <p className="text-gray-300">
-            비디오크루만의 영상제작 프로세스를 통해 과제와 니즈에 부합하는 최적의 결과물을
-            디자인하여 제공합니다.
+          <p className="text-[#8c8c8c]">
+            비디오크루만의 영상제작 프로세스를 통해 <br /> 고객의 니즈에 부합하는 최적의 콘텐츠를 <br /> 디자인하여 제공합니다.​
           </p>
 
-          <p className="mt-24">*과업의 형태에 따라 프로세스는 변동될 수 있습니다. </p>
+          <p className="md:mt-24 mt-14 text-[#8c8c8c]">*과업의 형태에 따라 프로세스는 <br /> 변동될 수 있습니다. </p>
         </div>
         <div>
           <img
             src={Header}
             alt="Process Header"
-            className="w-full rounded-lg"
+            className="w-full "
           />
         </div>
       </div>
