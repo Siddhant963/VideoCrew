@@ -9,7 +9,6 @@ export default function Footer() {
   return (
     <footer className="bg-[#111111] text-gray-300 py-12 px-4">
       <div className="max-w-7xl mx-auto flex flex-col gap-4">
-        {/* Logo */}
        <div className="flex items-center gap-1">
   <img
     src={videologo}
@@ -23,8 +22,6 @@ export default function Footer() {
   />
 </div>
 
-
-        {/* Description */}
         <div className="text-[15px] leading-relaxed text-[#8D8D8D] font-montserrat ">
           <p className="mb-4 md:mb-0">
             <span className=" font-suit text-[#8D8D8D]  ">**비디오크루(Video Crew)** </span>는 (주)러닝크루 컨설팅그룹의 영상 전문 브랜드입니다.
@@ -39,7 +36,6 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Copyright */}
         <div className="text-[15px]   ">
           © 2025. Video Crew all rights reserved.
         </div>

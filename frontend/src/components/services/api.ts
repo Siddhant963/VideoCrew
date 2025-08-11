@@ -38,7 +38,7 @@ class ApiService {
     }
   }
 
-  // Portfolio methods
+
   async getProjects() {
     return this.request("/projects")
   }
@@ -63,7 +63,7 @@ class ApiService {
     })
   }
 
-  // Contact methods
+
   async submitContact(contactData: any) {
     return this.request("/contact", {
       method: "POST",

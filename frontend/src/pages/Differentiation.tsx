@@ -11,7 +11,6 @@ const Differentiation: React.FC = () => {
     <section className="bg-black text-white">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8">
 
-        {/* Header Section */}
         <div className="pt-10 md:pt-16 flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-8">
           <div className="flex-shrink-0">
             <p className="text-sm text-gray-400 mb-1 sm:mb-2">
@@ -26,7 +25,7 @@ const Differentiation: React.FC = () => {
           </p>
         </div>
 
-        {/* Main Image */}
+
         <div className="mt-6 sm:mt-8">
           <img
             src={Header}
@@ -35,7 +34,7 @@ const Differentiation: React.FC = () => {
           />
         </div>
 
-        {/* Three Feature Boxes */}
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-6 sm:mt-8">
           {[
             {
@@ -65,7 +64,7 @@ const Differentiation: React.FC = () => {
           ))}
         </div>
 
-        {/* Steps */}
+
         <div className="mt-12 sm:mt-16 space-y-12 sm:space-y-16">
           {[
             {
@@ -97,7 +96,7 @@ const Differentiation: React.FC = () => {
               key={i}
               className={`grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center`}
             >
-              {/* Text and Number */}
+
               <div className={`${i % 2 === 1 ? "md:order-2" : ""}`}>
                 <div className="relative inline-block mb-3 sm:mb-4">
                   <img
@@ -117,7 +116,7 @@ const Differentiation: React.FC = () => {
                 </p>
               </div>
 
-              {/* Image */}
+
               <div className={`${i % 2 === 1 ? "md:order-1" : ""}`}>
                 <img
                   src={step.img}
@@ -129,7 +128,7 @@ const Differentiation: React.FC = () => {
           ))}
         </div>
 
-        {/* CTA */}
+
         <div className="mt-14 sm:mt-20 bg-gradient-to-r from-gray-800 via-black to-gray-800 p-6 sm:p-10 rounded-lg text-center">
           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 leading-snug">
             업계 최고 수준의 맞춤형 영상 콘텐츠

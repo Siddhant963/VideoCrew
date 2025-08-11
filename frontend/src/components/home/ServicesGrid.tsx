@@ -14,7 +14,6 @@ import content9 from "../../../public/imagestwo/Rectangle 15.png";
 import content10 from "../../../public/imagestwo/Rectangle 16.png";
 
 
-// Portfolio images
 const portfolioImages = [
   content2,
   content3,
@@ -28,13 +27,11 @@ const portfolioImages = [
 ];
 
 const ServiceGrid: React.FC = () => {
-   // Explicit order and exactly two rows (5 on first, 4 on second)
    const firstRowImages = [content8, content2, content3, content4, content9];
    const secondRowImages = [content5, content6, content7, content10];
   return (
     <section className="relative bg-black text-white py-24 sm:py-32 flex flex-col items-center">
       <div className="max-w-7xl w-full px-6 lg:px-6">
-        {/* Section Header */}
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
             비디오크루의 영상제작 사례
@@ -44,9 +41,6 @@ const ServiceGrid: React.FC = () => {
           </p>
         </div>
 
-        {/* Portfolio Image Grid removed from container to allow full-bleed layout */}
-
-        {/* "View More" Button */}
         <div className="mt-16 text-center">
           <button className="rounded-full bg-blue-600 px-8 py-3 text-base font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
             포트폴리오 둘러보기
@@ -54,11 +48,10 @@ const ServiceGrid: React.FC = () => {
         </div>
       </div>
 
-      {/* Centered two-row brick image grid */}
+
       <div className="w-full mt-16">
         <div className="mx-auto max-w-7xl px-0">
           <div className="flex flex-col gap-2 sm:gap-3 md:gap-4">
-            {/* Row 1 */}
             <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
               {firstRowImages.map((src, index) => (
                 <img
@@ -70,7 +63,6 @@ const ServiceGrid: React.FC = () => {
                 />
               ))}
             </div>
-            {/* Row 2 */}
             <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
               {secondRowImages.map((src, index) => (
                 <img
@@ -86,31 +78,27 @@ const ServiceGrid: React.FC = () => {
         </div>
       </div>
 
-      {/* Centered extra image */}
       <div className="mt-16">
         <img src={Img5} alt="" className="mx-auto" />
       </div>
 
-      {/* Centered heading */}
       <div className="flex justify-center text-center mt-8">
         <h1 className="text-xl sm:text-2xl font-bold leading-relaxed">
           이미 수많은 기업이 <br /> 비디오크루와 함께 하고 있습니다.
         </h1>
       </div>
 
-      {/* Centered image */}
+
       <div className="mt-8">
         <img src={Img6} alt="" className="mx-auto" />
       </div>
 
-      {/* Background with centered content */}
     <div
   className="relative w-full sm:h-[400px] h-[500px] mt-16 flex justify-center items-center bg-center bg-no-repeat bg-cover"
   style={{ backgroundImage: `url(${background})` }}
 >
   <div className="sm:flex-row justify-center items-center sm:gap-40 text-white flex flex-col gap-8">
     
-    {/* Card 1 */}
     <div className="flex flex-col items-center">
       <h1 className="text-[54px] sm:text-[64px] font-bold font-montserrat flex items-start gap-1">
         10
@@ -119,7 +107,7 @@ const ServiceGrid: React.FC = () => {
       <p>다년간의 경험</p>
     </div>
 
-    {/* Card 2 */}
+
     <div className="flex flex-col items-center">
       <h1 className="text-[54px] sm:text-[64px] font-bold font-montserrat flex items-start gap-1">
         100
@@ -128,7 +116,6 @@ const ServiceGrid: React.FC = () => {
       <p>누적 프로젝트 수</p>
     </div>
 
-    {/* Card 3 */}
     <div className="flex flex-col items-center">
       <h1 className="text-[54px] sm:text-[64px] font-bold font-montserrat flex items-start gap-1">
         100
@@ -137,7 +124,6 @@ const ServiceGrid: React.FC = () => {
       <p>고객 만족도</p>
     </div>
 
-    {/* Card 4 */}
     <div className="flex flex-col items-center">
       <h1 className="text-[54px] sm:text-[64px] font-bold font-montserrat flex items-start gap-1">
         90
@@ -150,7 +136,6 @@ const ServiceGrid: React.FC = () => {
 </div>
 
 
-      {/* Decorative curved divider */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[200%] h-24">
         <div className="w-full h-full border-t border-gray-700/50 rounded-[50%] bg-transparent shadow-[0_-10px_30px_-5px_rgba(0,119,255,0.1)]"></div>
       </div>
