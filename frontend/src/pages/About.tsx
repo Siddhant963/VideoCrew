@@ -14,12 +14,10 @@ import placeholder3 from "../../public/about/Image/placeholder.png";
 const AboutPage: React.FC = () => {
   return (
     <div className="bg-black text-white min-h-screen font-sans">
-      {/* Navbar */}
       <div className="relative z-10">
         <Navbar />
       </div>
 
-      {/* Hero Section */}
       <section className="relative px-4 sm:px-6 lg:px-8 pt-8 pb-16 md:pt-12 md:pb-20 lg:pt-16 lg:pb-24">
         <div className="max-w-7xl mx-auto">
           <p className="text-xs sm:text-sm text-gray-400 text-center md:text-left mb-6">
@@ -27,7 +25,6 @@ const AboutPage: React.FC = () => {
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16">
-            {/* Left */}
             <h1 className="text-xl text-center sm:text-3xl md:text-4xl lg:text-[45px] font-bold leading-snug mb-6">
               스토리로 말하는 영상 콘텐츠,
               <br />
@@ -36,7 +33,6 @@ const AboutPage: React.FC = () => {
               더 이상 고민하지 마세요!
             </h1>
 
-            {/* Right */}
             <div className="text-gray-400 text-sm sm:text-base leading-relaxed text-center">
               <p className="mb-4">
                 우리는 영상이 단순한 기록을 넘어, 감동을 전달하고, 생각을 움직이며, 변화를 이끌어내는 가장 강력한 매체라고 믿습니다. 비디오크루는 모든 프로젝트에 진정성을 담아, 고객의 메시지가 세상에 가장 효과적으로 전달될 수 있도록 창의적인 영상을 연구하고 실현합니다.
@@ -47,7 +43,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Hero Image */}
           <div className="mt-10 md:mt-16">
             <div className="relative w-full h-[450px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
               <img src={aboutPage} alt="Video Production" className="w-full h-full object-cover" />
@@ -61,18 +56,15 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Clients */}
           <div className="mt-10 md:mt-16">
             <img className="w-full h-auto object-contain" src={clientImage} alt="Clients" />
           </div>
         </div>
       </section>
 
-      {/* Divider */}
       <img className="w-full h-auto object-cover" src={about1} alt="Divider" />
 
-      {/* Core Values */}
-     <section className="py-12 md:py-16 lg:py-20">
+      <section className="py-12 md:py-16 lg:py-20">
   <div className="max-w-7xl mx-auto px-4">
     <div className="text-center mb-10">
       <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3">Core Value</h2>
@@ -89,7 +81,7 @@ const AboutPage: React.FC = () => {
       ].map((val, idx) => (
         <div
           key={idx}
-          className="relative aspect-square sm:aspect-[4/5]" // Square on mobile, taller on larger screens
+          className="relative aspect-square sm:aspect-[4/5]"
         >
           <img
             src={val.img}
@@ -107,12 +99,9 @@ const AboutPage: React.FC = () => {
   </div>
 </section>
 
-
-      {/* Divider */}
       <img className="w-full h-auto object-cover" src={about2} alt="Divider" />
 
-      {/* Work Culture */}
-     <section className="py-12 md:py-16 lg:py-20">
+      <section className="py-12 md:py-16 lg:py-20">
   <div className="max-w-7xl mx-auto px-4">
     <div className="text-center mb-10">
       <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3">Work Culture</h2>
