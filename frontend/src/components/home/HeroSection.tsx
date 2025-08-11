@@ -7,16 +7,16 @@ import Img3 from "../../../public/images/image 1.png";
 export const HeroSection: React.FC = () => {
   return (
     <>
-      {/* Hero Section */}
+
       <section className="relative">
         <div
           className="h-[480px] sm:h-[560px] md:h-[640px] xl:h-[720px] bg-cover bg-center relative"
           style={{ backgroundImage: `url(${bannerImg})` }}
         >
-          {/* Dark overlay */}
+ 
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
-          {/* Content */}
+
           <div className="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8 h-full flex items-end md:items-center">
             <div className="max-w-3xl pb-8 md:pb-0">
               <p className="text-xs sm:text-sm md:text-base text-gray-300 mb-4 text-center">
@@ -30,7 +30,7 @@ export const HeroSection: React.FC = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+
       <section className="bg-black text-white py-16">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
@@ -47,9 +47,9 @@ export const HeroSection: React.FC = () => {
             </p>
           </div>
 
-          {/* Grid */}
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 md:gap-4">
-            {/* Card 1 */}
+
             <div className="relative h-64 md:h-72 overflow-hidden">
               <img
                 src={Img1}
@@ -66,7 +66,7 @@ export const HeroSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Card 2 */}
+
             <div className="relative h-64 md:h-72 rounded-lg overflow-hidden">
               <img
                 src={Img2}
@@ -85,7 +85,7 @@ export const HeroSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Card 3 */}
+
             <div className="relative h-64 md:h-72 rounded-lg overflow-hidden">
               <img
                 src={Img3}
