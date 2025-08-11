@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="text-[15px] text-[#8D8D8D]">
+        <div className="text-[15px]   ">
           © 2025. Video Crew all rights reserved.
         </div>
       </div>

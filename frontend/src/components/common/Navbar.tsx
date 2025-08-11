@@ -5,19 +5,27 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react"; 
 import videologo from "../../assets/VIDEO.png";
 import Vectorcerw from "../../assets/Vector.png"
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const menuItems = ["회사소개", "프로세스", "차별점", "포트폴리오", "문의하기"];
+  const menuItems = [
+    { label: "회사소개", path: "/about" },
+    { label: "프로세스", path: "/process" },
+    { label: "차별점", path: "/differentiation" },
+    { label: "포트폴리오", path: "/portfolio" },
+    { label: "문의하기", path: "/contact" },
+  ];
 
   return (
-    <nav className="bg-black text-white px-6 py-4">
+   <nav className="bg-transparent text-white px-6 py-4">
+
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         
     
         {/* Logo */}
-       <div className="flex items-center gap-1">
+       <div className="flex items-center gap-[]">
   <img
     src={videologo}
     alt="VIDEO"
@@ -32,13 +40,15 @@ export default function Navbar() {
 
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-8 text-sm font-medium">
+        <ul className="hidden md:flex gap-8 text-[20px] font-medium">
           {menuItems.map((item, idx) => (
-            <li
-              key={idx}
-              className="hover:text-gray-300 cursor-pointer transition-colors"
-            >
-              {item}
+             <li key={idx}>
+              <Link
+                to={item.path}
+                className="hover:text-gray-300 transition-colors cursor-pointer"
+              >
+                {item.label}
+              </Link>
             </li>
           ))}
         </ul>
@@ -57,11 +67,13 @@ export default function Navbar() {
       {isOpen && (
         <ul className="md:hidden flex flex-col gap-4 mt-4 text-sm font-medium bg-black border-t border-gray-800 pt-4">
           {menuItems.map((item, idx) => (
-            <li
-              key={idx}
-              className="px-2 hover:text-gray-300 cursor-pointer transition-colors"
-            >
-              {item}
+            <li key={idx}>
+              <Link
+                to={item.path}
+                className="hover:text-gray-300 transition-colors cursor-pointer px-2"
+              >
+                {item.label}
+              </Link>
             </li>
           ))}
         </ul>
