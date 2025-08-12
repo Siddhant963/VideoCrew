@@ -93,8 +93,6 @@ export default function ContactForm() {
       <div className="relative z-10">
         <Navbar />
       </div>
-
-      {/* Background images */}
       <img
         src={leftBg}
         alt=""
@@ -106,9 +104,8 @@ export default function ContactForm() {
         className="absolute top-1/6 left-0 -translate-y-1/2 w-[450px] pointer-events-none select-none z-0"
       />
 
-      {/* Content wrapper */}
+  
       <div className="relative z-10 mt-10">
-        {/* Top Section */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 p-4 md:p-8 border border-[#FFFFFF2E] shadow-lg">
           <div className="md:hidden text-center">
             <h2 className="text-[20px] font-bold mb-2 font-SUITVariable">문의하기</h2>
@@ -154,7 +151,7 @@ export default function ContactForm() {
           </div>
         </div>
 
-        {/* Contact Form */}
+       
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-8">
           <h2 className="text-center text-[30px] sm:text-4xl md:text-5xl lg:text-[64px] font-bold mb-8">
             Contact Us
@@ -164,7 +161,7 @@ export default function ContactForm() {
             onSubmit={handleSubmit}
             className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:text-[16px] sm:text-[12px]"
           >
-            {/* Name */}
+   
             <label htmlFor="name" className="sr-only text-[#FFFFFF99]">
               성함 / 직책
             </label>
@@ -179,7 +176,7 @@ export default function ContactForm() {
               required
             />
 
-            {/* Running Time */}
+         
             <label htmlFor="runningTime" className="sr-only text-[#FFFFFF99]">
               러닝 타임 (분량)
             </label>
@@ -196,7 +193,7 @@ export default function ContactForm() {
               <option value="10+min">10분 이상</option>
             </select>
 
-            {/* Email */}
+     
             <label htmlFor="email" className="sr-only">
               이메일 주소
             </label>
@@ -211,7 +208,7 @@ export default function ContactForm() {
               required
             />
 
-            {/* Target Audience (Budget) */}
+     
             <label htmlFor="targetAudience" className="sr-only">
               희망 예산 (러프하게 선택해주세요.)
             </label>
@@ -228,7 +225,7 @@ export default function ContactForm() {
               <option value="budget3">300만원 이상</option>
             </select>
 
-            {/* Phone */}
+           
             <label htmlFor="phone" className="sr-only">
               연락처
             </label>
@@ -242,7 +239,7 @@ export default function ContactForm() {
               className="p-3 bg-zinc-900 border border-gray-700 rounded"
             />
 
-            {/* Production Purpose */}
+  
             <label htmlFor="productionPurpose" className="sr-only">
               제작 목적
             </label>
@@ -260,7 +257,7 @@ export default function ContactForm() {
               <option value="other">기타</option>
             </select>
 
-            {/* Company */}
+         
             <label htmlFor="company" className="sr-only">
               회사명 / 채널명
             </label>
@@ -274,7 +271,7 @@ export default function ContactForm() {
               className="p-3 bg-zinc-900 border border-gray-700 rounded"
             />
 
-            {/* Upload Plan */}
+      
             <label htmlFor="uploadPlan" className="sr-only">
               영상을 어디에 업로드 할 예정인가요?
             </label>
@@ -292,7 +289,7 @@ export default function ContactForm() {
               <option value="other">기타</option>
             </select>
 
-            {/* Video Count */}
+
             <label htmlFor="videoCount" className="sr-only">
               영상 제작 건수
             </label>
@@ -306,7 +303,6 @@ export default function ContactForm() {
               className="p-3 bg-zinc-900 border border-gray-700 rounded"
             />
 
-            {/* Reference Links */}
             <label htmlFor="referenceLinks" className="sr-only">
               참고 영상 전달 (유튜브 링크, 전 작업물 등)
             </label>
@@ -320,7 +316,7 @@ export default function ContactForm() {
               className="p-3 bg-zinc-900 border border-gray-700 rounded col-span-1"
             />
 
-            {/* Shoot Date */}
+
             <label htmlFor="shootDate" className="sr-only">
               희망 영상 납품 일시
             </label>
@@ -334,7 +330,7 @@ export default function ContactForm() {
               className="p-3 bg-zinc-900 border border-gray-700 rounded col-span-1"
             />
 
-            {/* Subject (website/SNS links) */}
+
             <label htmlFor="subject" className="sr-only">
               현재 보유한 홈페이지, SNS, 랜딩페이지 링크를 가능한 모두 적어주세요.
             </label>
@@ -348,7 +344,7 @@ export default function ContactForm() {
               className="p-3 bg-zinc-900 border border-gray-700 rounded col-span-1"
             />
 
-            {/* Consent Text */}
+          
              <div className=" max-w-7xl flex flex-col gap-2 col-span-1 md:col-span-2 text-sm text-[#FFFFFF99] border border-[#FFFFFF2E] shadow-lg p-4">
             <span className="font-semibold text-[19px]" > 개인정보 수집 및 이용 동의</span>
               <p>
@@ -365,7 +361,7 @@ export default function ContactForm() {
               </p>
             </div>
 
-            {/* Consent Checkbox */}
+       
             <label className="flex items-center gap-2 col-span-1 md:col-span-2 lg:text-[16px] sm:text-[12px] text-[#FFFFFF99]">
               <input
                 type="checkbox"
@@ -380,12 +376,12 @@ export default function ContactForm() {
               개인정보 수집 및 이용에 동의합니다.​
             </label>
 
-            {/* Submit Button */}
+ 
             <div className="col-span-1 md:col-span-2 flex justify-center">
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-[#2448FF] text-white py-3 text-[20px] w-[250px] h-[46px] flex items-center justify-center rounded-full font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-[#2448FF] cursor-pointer text-white py-3 text-[20px] w-[250px] h-[46px] flex items-center justify-center rounded-full font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? "제출 중..." : "제출하기"}
               </button>
