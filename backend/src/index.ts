@@ -1,3 +1,4 @@
+import cors from "cors";
 import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
@@ -14,6 +15,11 @@ const app = express();
 
 // Middleware
 app.use(express.json());
+app.use(cors({
+  origin: ["http://localhost:5173"], // React dev server
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
 // Routes
